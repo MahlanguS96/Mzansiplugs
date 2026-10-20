@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mzansi Plugs - Jobs, Bursaries, Learnerships & Internships SA</title>
+    <meta name="description" content="Latest Jobs, Bursaries, Learnerships and Internships in South Africa. Daily updates from Gauteng, Western Cape, KZN and all provinces.">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://5gvci.com/act/files/tag.min.js?z=12013286" data-cfasync="false" async></script>
+</head>
+<body>
+<header>
+    <div class="container">
+        <h1 class="logo">Mzansi Plugs</h1>
+        <p class="tagline">Jobs • Bursaries • Learnerships • Internships</p>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search e.g. Cashier, Transnet, Bursary...">
+        </div>
+    </div>
+</header>
+<!-- TOP AD SLOT - PASTE AD CODE HERE -->
+<div class="container ad-slot">
+</div>
+<nav class="container filters">
+    <div class="filter-group">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="Job">Jobs</button>
+        <button class="filter-btn" data-filter="Learnership">Learnerships</button>
+        <button class="filter-btn" data-filter="Bursary">Bursaries</button>
+        <button class="filter-btn" data-filter="Internship">Internships</button>
+    </div>
+    <div class="filter-group">
+        <button class="filter-btn province active" data-province="all">All Provinces</button>
+        <button class="filter-btn province" data-province="Gauteng">Gauteng</button>
+        <button class="filter-btn province" data-province="Western Cape">Western Cape</button>
+        <button class="filter-btn province" data-province="KwaZulu-Natal">KZN</button>
+        <button class="filter-btn province" data-province="Limpopo">Limpopo</button>
+    </div>
+</nav>
+<main class="container">
+    <div id="jobsGrid" class="jobs-grid"></div>
+</main>
+<!-- MIDDLE AD SLOT -->
+<div class="container ad-slot">
+    <script>(function(s){s.dataset.zone='12013420',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+</div>
+<footer>
+    <div class="container">
+        <p><strong>Mzansi Plugs</strong> - We share daily opportunities. We are NOT the employer. Always apply on official company site.</p>
+        <p><a href="#">About</a> | <a href="#">Privacy Policy</a> | <a href="#">Contact: mzansiplugs@gmail.com</a></p>
+        <button id="adminBtn" class="admin-link">+ Add Job (Admin Only)</button>
+    </div>
+</footer>
+<!-- Job Detail Modal -->
+<div id="jobModal" class="modal hidden">
+    <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span>
+        <div id="modalBody"></div>
+    </div>
+</div>
+<!-- Add Job Modal -->
+<div id="addJobModal" class="modal hidden">
+    <div class="modal-content">
+        <span id="closeAddModal" class="close">&times;</span>
+        <h2>Add New Job / Bursary</h2>
+        <form id="addJobForm">
+            <input type="text" id="f_title" placeholder="Job Title e.g. Cashier - Boxer" required>
+            <input type="text" id="f_company" placeholder="Company e.g. Boxer Superstores" required>
+            <input type="text" id="f_location" placeholder="Location e.g. Pretoria" required>
+            <select id="f_province" required>
+                <option>Gauteng</option>
+                <option>Western Cape</option>
+                <option>KwaZulu-Natal</option>
+                <option>Eastern Cape</option>
+                <option>Limpopo</option>
+                <option>Mpumalanga</option>
+                <option>North West</option>
+                <option>Free State</option>
+                <option>Northern Cape</option>
+            </select>
+            <select id="f_type" required>
+                <option value="Job">Job</option>
+                <option value="Learnership">Learnership</option>
+                <option value="Bursary">Bursary</option>
+                <option value="Internship">Internship</option>
+            </select>
+            <input type="text" id="f_salary" placeholder="Salary/Stipend e.g. R5500 / month">
+            <input type="url" id="f_applyLink" placeholder="Original LinkedIn / Company Apply Link" required>
+            <textarea id="f_desc" placeholder="Full Job Description" rows="4" required></textarea>
+            <textarea id="f_req" placeholder="Requirements, one per line" rows="3"></textarea>
+            <button type="submit">Add Job to Site</button>
+        </form>
+    </div>
+</div>
+<script src="jobs.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
