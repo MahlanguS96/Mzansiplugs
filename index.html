@@ -63,6 +63,7 @@
     <div class="modal-content">
         <span id="closeAddModal" class="close">&times;</span>
         <h2>Add New Job / Bursary</h2>
+        <p style="font-size:13px;color:#666;margin:8px 0;">Tip: You can add Apply Link, Email CV, or BOTH. If you add both, both buttons will show.</p>
         <form id="addJobForm">
             <input type="text" id="f_title" placeholder="Job Title e.g. Cashier - Boxer" required>
             <input type="text" id="f_company" placeholder="Company e.g. Boxer Superstores" required>
@@ -85,7 +86,10 @@
                 <option value="Internship">Internship</option>
             </select>
             <input type="text" id="f_salary" placeholder="Salary/Stipend e.g. R5500 / month">
-            <input type="url" id="f_applyLink" placeholder="Original LinkedIn / Company Apply Link" required>
+            
+            <label style="font-size:13px;font-weight:bold;margin-top:8px;display:block;">Application Methods (fill at least ONE)</label>
+            <input type="url" id="f_applyLink" placeholder="Original LinkedIn / Company Apply Link (optional if email provided)">
+            <input type="email" id="f_email" placeholder="Email to send CV to e.g. hr@company.co.za (optional if link provided)">
             <textarea id="f_desc" placeholder="Full Job Description" rows="4" required></textarea>
             <textarea id="f_req" placeholder="Requirements, one per line" rows="3"></textarea>
             <button type="submit">Add Job to Site</button>

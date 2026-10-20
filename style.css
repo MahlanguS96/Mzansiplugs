@@ -1,30 +1,63 @@
-* {margin:0;padding:0;box-sizing:border-box;font-family:Inter, Arial, sans-serif;}
-body {background:#f5f7fa;color:#222;}
+* {margin:0;padding:0;box-sizing:border-box;font-family:Inter, 'Segoe UI', Arial, sans-serif;}
+body {background:#f0f4f8;color:#1e293b;line-height:1.5;}
 .container {max-width:1100px;margin:auto;padding:15px;}
-header {background:#111;color:white;padding:25px 15px;text-align:center;}
-.logo {font-size:32px;font-weight:900;letter-spacing:1px;}
-.tagline {opacity:0.8;margin:8px 0 15px;}
-.search-box input {width:100%;max-width:500px;padding:14px;border-radius:30px;border:none;outline:none;font-size:16px;}
-.filters {background:white;margin-top:15px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,0.05);}
-.filter-group {display:flex;flex-wrap:wrap;gap:8px;padding:10px;}
-.filter-btn {padding:8px 16px;border-radius:20px;border:1px solid #ddd;background:#fff;cursor:pointer;}
-.filter-btn.active {background:#111;color:white;border-color:#111;}
-.jobs-grid {display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:15px;margin-top:20px;}
-.job-card {background:white;padding:18px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.06);cursor:pointer;transition:0.2s;}
-.job-card:hover {transform:translateY(-3px);box-shadow:0 6px 15px rgba(0,0,0,0.1);}
-.job-card h3 {font-size:17px;margin-bottom:6px;}
-.job-card .meta {font-size:13px;color:#666;margin:6px 0;}
-.badge {display:inline-block;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:bold;background:#e8f0ff;color:#1a56ff;margin-right:5px;}
-.badge.learn {background:#fff3cd;color:#856404;}
-.badge.bursary {background:#d4edda;color:#155724;}
-.apply-btn {margin-top:12px;width:100%;padding:10px;background:#111;color:white;border:none;border-radius:8px;cursor:pointer;font-weight:bold;}
-.ad-slot {margin:20px auto;}
-.ad-placeholder {border:2px dashed #bbb;padding:20px;text-align:center;background:#fff;color:#999;border-radius:8px;font-size:14px;}
-.modal {position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);display:flex;align-items:center;justify-content:center;z-index:100;padding:15px;}
+
+/* HEADER - Professional Green to Blue Gradient */
+header {background: linear-gradient(135deg, #0a7a3d 0%, #0a6840 35%, #0e6bff 100%); color:white;padding:32px 15px;text-align:center;box-shadow:0 4px 20px rgba(10,122,61,0.25);}
+.logo {font-size:36px;font-weight:900;letter-spacing:0.5px;text-shadow:0 2px 10px rgba(0,0,0,0.15);}
+.tagline {opacity:0.95;margin:8px 0 18px;font-weight:500;letter-spacing:0.3px;}
+.search-box input {width:100%;max-width:540px;padding:14px 20px;border-radius:30px;border:none;outline:none;font-size:16px;box-shadow:0 4px 15px rgba(0,0,0,0.15);}
+.search-box input:focus {box-shadow:0 4px 20px rgba(0,0,0,0.25);}
+
+/* FILTERS */
+.filters {background:white;margin-top:18px;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border:1px solid #e2e8f0;}
+.filter-group {display:flex;flex-wrap:wrap;gap:8px;padding:12px 14px;}
+.filter-btn {padding:8px 18px;border-radius:24px;border:1.5px solid #e2e8f0;background:#f8fafc;cursor:pointer;font-weight:500;transition:all 0.2s;color:#475569;}
+.filter-btn:hover {border-color:#0a7a3d;color:#0a7a3d;background:#f0fdf4;}
+.filter-btn.active {background:linear-gradient(135deg,#0a7a3d,#0e6bff);color:white;border-color:transparent;box-shadow:0 2px 10px rgba(10,122,61,0.3);}
+
+/* JOBS GRID */
+.jobs-grid {display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:18px;margin-top:22px;}
+.job-card {background:white;padding:20px;border-radius:16px;box-shadow:0 2px 12px rgba(0,0,0,0.05);cursor:pointer;transition:all 0.25s;border:1px solid #eef2f7;border-left:4px solid #0a7a3d;}
+.job-card:hover {transform:translateY(-4px);box-shadow:0 10px 25px rgba(10,122,61,0.15);border-left-color:#0e6bff;}
+.job-card h3 {font-size:17px;margin-bottom:8px;color:#0f172a;line-height:1.3;}
+.job-card .meta {font-size:13px;color:#64748b;margin:6px 0;}
+
+/* BADGES - Colorful but professional */
+.badge {display:inline-block;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:0.3px;margin-right:6px;text-transform:uppercase;}
+.badge.job {background:#dcfce7;color:#166534;border:1px solid #bbf7d0;}
+.badge.learnership {background:#dbeafe;color:#1e40af;border:1px solid #bfdbfe;}
+.badge.bursary {background:#fef3c7;color:#92400e;border:1px solid #fde68a;}
+.badge.internship {background:#e0e7ff;color:#3730a3;border:1px solid #c7d2fe;}
+.badge.province-badge {background:#f1f5f9;color:#475569;border:1px solid #e2e8f0;}
+.apply-hint {font-size:10px;font-weight:700;padding:3px 8px;border-radius:12px;background:linear-gradient(135deg,#0a7a3d,#0e6bff);color:white;}
+
+.apply-btn {margin-top:14px;width:100%;padding:11px;background:linear-gradient(135deg,#0a7a3d 0%, #0e6bff 100%);color:white;border:none;border-radius:10px;cursor:pointer;font-weight:700;letter-spacing:0.3px;transition:0.2s;box-shadow:0 2px 8px rgba(10,122,61,0.2);}
+.apply-btn:hover {transform:translateY(-1px);box-shadow:0 4px 12px rgba(10,122,61,0.3);}
+
+.ad-slot {margin:22px auto;}
+.ad-placeholder {border:2px dashed #cbd5e1;padding:20px;text-align:center;background:#fff;color:#94a3b8;border-radius:12px;font-size:14px;}
+
+.modal {position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(15,23,42,0.65);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;z-index:100;padding:15px;}
 .modal.hidden {display:none;}
-.modal-content {background:white;width:100%;max-width:650px;max-height:90vh;overflow:auto;padding:20px;border-radius:12px;position:relative;}
-.close {position:absolute;top:12px;right:18px;font-size:28px;cursor:pointer;}
-.admin-link {background:none;border:none;color:#888;margin-top:10px;cursor:pointer;text-decoration:underline;}
-form input, form select, form textarea {width:100%;padding:12px;margin:8px 0;border:1px solid #ddd;border-radius:8px;}
-form button {width:100%;padding:12px;background:#111;color:white;border:none;border-radius:8px;font-weight:bold;margin-top:10px;cursor:pointer;}
-footer {background:white;margin-top:30px;text-align:center;font-size:13px;color:#666;padding:20px;}
+.modal-content {background:white;width:100%;max-width:680px;max-height:90vh;overflow:auto;padding:24px;border-radius:20px;position:relative;box-shadow:0 25px 50px rgba(0,0,0,0.25);}
+.close {position:absolute;top:14px;right:18px;font-size:28px;cursor:pointer;color:#64748b;}
+.close:hover {color:#0f172a;}
+
+.admin-link {background:none;border:none;color:#64748b;margin-top:12px;cursor:pointer;text-decoration:underline;font-size:13px;}
+form input, form select, form textarea {width:100%;padding:12px 14px;margin:8px 0;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;transition:0.2s;}
+form input:focus, form select:focus, form textarea:focus {outline:none;border-color:#0a7a3d;box-shadow:0 0 0 3px rgba(10,122,61,0.1);}
+form button {width:100%;padding:13px;background:linear-gradient(135deg,#0a7a3d,#0e6bff);color:white;border:none;border-radius:10px;font-weight:700;margin-top:12px;cursor:pointer;box-shadow:0 4px 12px rgba(10,122,61,0.2);}
+
+/* NEW APPLY BUTTONS INSIDE MODAL */
+.apply-section {display:flex;flex-direction:column;gap:10px;margin-top:10px;}
+.btn-apply {display:flex;align-items:center;justify-content:center;gap:8px;padding:13px;border-radius:12px;text-decoration:none;font-weight:800;font-size:15px;transition:all 0.2s;}
+.btn-online {background:linear-gradient(135deg,#0a7a3d,#0a6840);color:white;box-shadow:0 4px 12px rgba(10,122,61,0.25);}
+.btn-online:hover {transform:translateY(-1px);box-shadow:0 6px 16px rgba(10,122,61,0.35);}
+.btn-email {background:linear-gradient(135deg,#0e6bff,#0a58d0);color:white;box-shadow:0 4px 12px rgba(14,107,255,0.25);}
+.btn-email:hover {transform:translateY(-1px);box-shadow:0 6px 16px rgba(14,107,255,0.35);}
+.email-box {background:#f0f7ff;border:1px solid #bfdbfe;padding:10px 14px;border-radius:10px;font-size:14px;color:#1e40af;}
+
+footer {background:white;margin-top:40px;text-align:center;font-size:13px;color:#64748b;padding:28px;border-top:1px solid #e2e8f0;}
+footer a {color:#0a7a3d;text-decoration:none;font-weight:600;}
+footer a:hover {color:#0e6bff;}

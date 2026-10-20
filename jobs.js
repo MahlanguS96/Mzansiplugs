@@ -1,29 +1,30 @@
 const jobsData = [
     {
         id: 1,
-        title: "Cashier - Boxer Superstores",
-        company: "Boxer",
-        location: "Pretoria, Atteridgeville",
-        province: "Gauteng",
-        type: "Job",
-        salary: "R5,500 / month",
+        title: "PG Group Shatterprufe Learnership 2026",
+        company: "PG Group (Shatterprufe)",
+        location: "Struandale, Neave",
+        province: "Port Elizabeth, Eastern Cape",
+        type: "learnership",
+        salary: "Market Related",
         posted: "2 days ago",
-        applyLink: "https://www.linkedin.com/jobs/view/cashier-boxer",
-        description: "Boxer Superstores is hiring cashiers for various stores in Gauteng. No experience needed, Grade 10 accepted.",
-        requirements: ["Grade 10 / 11 / 12", "Able to work retail hours", "Good communication", "SA Citizen"]
+        applyLink: "https://www.pggroup.co.za",
+        email: "sxtraining@pg.co.za",
+        description: "Opportunities for hands-on and self-motivated individuals exist within the PG Group company and its divisions in these roles.  Automotive Manufacturing/Production",
+        requirements: ["50% or above for Matric Maths & English", "South African Citizens aged 18-35"]
     },
     {
         id: 2,
-        title: "Transnet Learnership 2026 - No Experience",
-        company: "Transnet",
-        location: "Johannesburg",
+        title: "Project Accountant @ BANKSETA",
+        company: "BANKSETA",
+        location: "Gauteng - Centurion (Head Office)",
         province: "Gauteng",
-        type: "Learnership",
-        salary: "R7,000 stipend",
+        type: "Job",
+        salary: "R 760 000 per annum CTC",
         posted: "1 day ago",
-        applyLink: "https://www.linkedin.com/jobs/view/transnet-learnership",
-        description: "Transnet is offering a 12-month learnership for youth with Grade 12. You will receive training and monthly stipend.",
-        requirements: ["Grade 12 with Maths", "Age 18-35", "Unemployed", "No criminal record"]
+        applyLink: "https://bankseta.gosmarthr.co.za/recruits/jprofile.aspx?ID=7e5e48ee-7516-4f7b-83ff-b4d400ec5438",
+        description: "The Project Accountant reports directly to the Manager: Youth Development. The Accountant is responsible for ensuring that all accounts payable and accounts receivable are undertaken within set policies and procedures and ensuring compliance with relevant financial and accounting standards while maintaining up-to-date, effective and accurate accounting.",
+        requirements: ["Educational Qualifications:", "Bachelor’s Degree (NQF 7) in Accounting, Commerce, Financial Management, or an equivalent field.", "Professional Experience:", "Minimum 5 years’ hands-on experience in dedicated project accounting, contract financial management, and complex payment reconciliations.", "Proven track record of managing and reconciling finances for multi-year operational projects with budgets exceeding R1 Million"]
     },
     {
         id: 3,
@@ -47,7 +48,8 @@ const jobsData = [
         type: "Job",
         salary: "R5,000",
         posted: "Today",
-        applyLink: "https://www.linkedin.com/jobs/view/shoprite-general-worker",
+        applyLink: "https://www.linkedin.com/jobs/view/labour-internship",
+        email: "jobs@shoprite.co.za",
         description: "Shoprite Checkers hiring general workers for Western Cape stores.",
         requirements: ["Grade 10", "Hard working", "Able to lift stock"]
     },
@@ -64,4 +66,8 @@ const jobsData = [
         description: "24-month internship for graduates at Department of Employment and Labour.",
         requirements: ["Diploma / Degree", "No work experience", "SA Citizen 18-35"]
     }
+
+    
+
+
 ];
