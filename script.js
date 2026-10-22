@@ -10,6 +10,28 @@ const searchInput = document.getElementById("searchInput");
 let activeType = "all";
 let activeProvince = "all";
 
+function formatClosingDate(dateStr) {
+    if (!dateStr) return null;
+    try {
+        const d = new Date(dateStr);
+        if (isNaN(d)) return dateStr; // fallback if not ISO date
+        return d.toLocaleDateString('en-ZA', { day: 'numeric', month: 'short', year: 'numeric' });
+    } catch { return dateStr; }
+}
+
+function getClosingStatus(dateStr) {
+    if (!dateStr) return { text: "", cls: "" };
+    const today = new Date(); today.setHours(0,0,0,0);
+    const close = new Date(dateStr); close.setHours(0,0,0,0);
+    if (isNaN(close)) return { text: dateStr, cls: "" };
+    const diffDays = Math.ceil((close - today) / (1000*60*60*24));
+    if (diffDays < 0) return { text: `Closed on ${formatClosingDate(dateStr)}`, cls: "closed" };
+    if (diffDays === 0) return { text: "Closes Today!", cls: "urgent" };
+    if (diffDays === 1) return { text: "Closes Tomorrow", cls: "urgent" };
+    if (diffDays <= 3) return { text: `Closes in ${diffDays} days`, cls: "urgent" };
+    return { text: `Closes: ${formatClosingDate(dateStr)}`, cls: "" };
+}
+
 function renderJobs() {
     const q = searchInput.value.toLowerCase();
     const filtered = allJobs.filter(j => {
@@ -26,10 +48,12 @@ function renderJobs() {
         if (hasLink && hasEmail) applyHint = "Link + Email";
         else if (hasLink) applyHint = "Online Apply";
         else if (hasEmail) applyHint = "Email CV";
-        
+
+        // Simple closing date display - no function needed
+        const closingDisplay = job.closingDate ? `Closing: ${job.closingDate}` : '';
         return `
         <div class="job-card" onclick="openJob(${job.id})">
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;flex-wrap:wrap;gap:6px;">
                 <div>
                     <span class="badge ${job.type.toLowerCase()}">${job.type}</span>
                     <span class="badge province-badge">${job.province}</span>
@@ -39,6 +63,7 @@ function renderJobs() {
             <h3>${job.title}</h3>
             <div class="meta">${job.company} • ${job.location}</div>
             <div class="meta">${job.salary} • ${job.posted}</div>
+            ${closingDisplay ? `<div class="meta" style="background:#fff3cd; padding:5px 8px; border-radius:6px; font-weight:bold; margin-top:6px;">${closingDisplay}</div>` : ''} 
             <button class="apply-btn">View & Apply</button>
         </div>
     `}).join("") || "<p>No jobs found. Try another search.</p>";
@@ -80,11 +105,19 @@ window.openJob = function(id) {
       return html;
     })();
 
+    const closing = getClosingStatus(job.closingDate);
+    const closingDetailHtml = job.closingDate ? `
+        <div class="closing-detail ${closing.cls}">
+            <span>⏰</span> <strong>Closing Date:</strong> ${formatClosingDate(job.closingDate)} - ${closing.text}
+        </div>
+    ` : '';
+
     document.getElementById("modalBody").innerHTML = `
         <span class="badge ${job.type.toLowerCase()}">${job.type}</span>
         <h2 style="margin:12px 0">${job.title}</h2>
         <p><strong>${job.company}</strong> - ${job.location} - ${job.province}</p>
         <p style="margin:10px 0"><strong>${job.salary}</strong> • Posted ${job.posted}</p>
+        ${closingDetailHtml}
         <hr style="margin:15px 0;border:none;border-top:1px solid #e5e7eb;">
         <h4>Job Description</h4>
         <p style="margin:10px 0;line-height:1.6">${job.description}</p>
@@ -147,6 +180,7 @@ document.getElementById("addJobForm").addEventListener("submit", e => {
         type: document.getElementById("f_type").value,
         salary: document.getElementById("f_salary").value || "Not specified",
         posted: "Just now",
+        closingDate: document.getElementById("f_closingDate").value,
         applyLink: applyLink,
         email: email,
         description: document.getElementById("f_desc").value,
