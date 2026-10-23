@@ -91,7 +91,7 @@ Knowledge of inventory control procedures, industry standards, and relevant regu
         applyLink: "https://edu.jobswall.co.za/raf-paralegal-vacancy-2026/",
         description: "The Road Accident Fund (RAF) invites suitably qualified and experienced candidates to apply for the position of Paralegal (High Court) within its Governance Division in Menlo Park, Gauteng. he successful candidate will provide administrative, technical and legal support to attorneys handling litigation matters. The role involves legal research, document preparation, case  management, reporting and stakeholder engagement to support effective legal operations. Applicants should have a Bachelor’s Degree in Law or an equivalent qualification, together with at least three years of relevant experience in a legal environment.",
         requirements: [
-            "Bachelor’s Degree in Law or an equivalent qualification.",
+            "Bachelor's Degree in Law or an equivalent qualification.",
             "At least three years of relevant experience in a legal environment.",
             "Knowledge of legislation, regulatory compliance and governance.",
             "Knowledge of legal drafting and claims litigation.",
@@ -130,5 +130,31 @@ The primary purpose of a Retentions Consultant is to proactively engage with mem
             "Relationship management",
             "Employment equity"
         ]
+    },
+    {
+        id: 7,
+        title: "UIF ITR Learnership Programme 2026 Opens: Monthly Stipend, Salary Growth, and Career Development Opportunities",
+        company: "UIF Labour Activation Programme (LAP)",
+        location: "South Africa",
+        province: "Not specified",
+        type: "Learnership",
+        salary: "Monthly stipend of R3,000",
+        applyLink: "https://forms.cloud.microsoft/pages/responsepage.aspx?id=4v1JrEBi7kS4PcaB4xPy0wHaC559G6pDjHEd4-DANt5UMjEwQ0tOVldNQ1hYS0VKUE43WEpCMThNUS4u&route=shorturl",
+        description: "The UIF ITR Learnership Programme 2026 is a government initiative aimed at providing unemployed youth with practical work experience, skills development, and career growth opportunities. The program offers a monthly stipend of R3,000 to support participants during their learnership period. It is designed to equip learners with the necessary skills and knowledge to enhance their employability and prepare them for future career opportunities.",
+        requirements: [
+            "Applicants are generally expected to meet the following criteria:",
+            "South African citizen",
+            "Valid South African ID document",
+            "Grade 12 (Matric)",
+            "Currently unemployed",
+            "Good communication skills",
+            "Basic computer literacy",
+            "Willingness to learn",
+            "Ability to work effectively with others",
+            "Meeting the minimum requirements does not guarantee selection, as programmes may receive a high volume of applications."
+        ],
+    },
+    {
+        
     }
 ];
