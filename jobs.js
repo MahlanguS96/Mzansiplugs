@@ -154,7 +154,7 @@ The primary purpose of a Retentions Consultant is to proactively engage with mem
             "Meeting the minimum requirements does not guarantee selection, as programmes may receive a high volume of applications."
         ],
     },
-    {
+    
         
-    }
+    
 ];
